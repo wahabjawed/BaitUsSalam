@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+	<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="msapplication-tap-highlight" content="no" />
+	<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<link href="css/jquery.mobile-1.4.2.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	
+	<title>Fahmedeen</title>
+	<script src="js/jquery-1.9.1.js" type="text/javascript"></script>
+	<script src="js/panel.js"></script>
+	<script src="js/jquery.mobile-1.4.2.min.js" type="text/javascript"></script>
+	<script>
+		$( document ).on( "pagecreate", "#demo-page", function() {
+
+			$( document ).on( "swipeleft swiperight", "#demo-page", function( e ) {
+				// We check if there is no open panel on the page because otherwise
+				// a swipe to close the left panel would also open the right panel (and v.v.).
+				// We do this by checking the data that the framework stores on the page element (panel: open).
+				if ( $( ".ui-page-active" ).jqmData( "panel" ) !== "open" ) {
+					if ( e.type === "swipeleft" ) {
+						$( "#right-panel" ).panel( "open" );
+					} else if ( e.type === "swiperight" ) {
+						$( "#left-panel" ).panel( "open" );
+					}
+				}
+			});
+		});
+    </script>
+	<style>
+/* Swipe works with mouse as well but often causes text selection. */
+#demo-page * {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+/* Content styling. */
+dl {
+	font-family: "Times New Roman", Times, serif;
+	padding: 1em;
+}
+dt {
+	font-size: 2em;
+	font-weight: bold;
+}
+dt span {
+	font-size: .5em;
+	color: #777;
+	margin-left: .5em;
+}
+dd {
+	font-size: 1.25em;
+	margin: 1em 0 0;
+	padding-bottom: 1em;
+	border-bottom: 1px solid #eee;
+}
+.back-btn {
+	float: right;
+	margin: 0 2em 1em 0;
+}
+</style>
+	</head>
+	<body>
+    <div data-role="page" class="jqm-demos" id="intro">
+      <div data-role="header" class="jqm-header">
+        <h2><a href="index.html" title="Fahmedeen"><img src="img/logo.png" alt="jQuery Mobile"></a></h2>
+       
+        <a href="#" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a> <a href="#" class="jqm-search-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-search ui-nodisc-icon ui-alt-icon ui-btn-right">Search</a> </div>
+      <!-- /header -->
+      
+      <div role="main" class="ui-content jqm-content">
+        <h1>Welcome to Fahmedeen</h1>
+        <div data-role="collapsible-set" data-iconpos="right" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d">
+          <div data-role="collapsible">
+            <h3>Latest Special Bayan</h3>
+            <p>Content</p>
+          </div>
+          <div data-role="collapsible" data-collapsed="true">
+            <h3>Latest Sunday Bayan</h3>
+            <ul data-role="listview" data-icon="arrow-r">
+              <li><a href="#">Page</a><a href="#">Default</a></li>
+              <li><a href="#">Page</a><a href="#">Default</a></li>
+              <li><a href="#">Page</a><a href="#">Default</a></li>
+            </ul>
+            
+          </div>
+          <div data-role="collapsible" data-collapsed="true">
+            <h3>Latest Friday Bayan</h3>
+            <p>Content</p>
+          </div>
+             <div data-role="collapsible" data-collapsed="true">
+            <h3>Latest Morning Dars</h3>
+            <p>Content</p>
+          </div>
+             <div data-role="collapsible" data-collapsed="true">
+            <h3>Latest Tarbiati Majlis</h3>
+            <p>Content</p>
+          </div>
+                <div data-role="collapsible" data-collapsed="true">
+            <h3>Ramzan Bayans</h3>
+            <p>Content</p>
+          </div>
+                <div data-role="collapsible" data-collapsed="true">
+            <h3>Nazmain</h3>
+            <p>Content</p>
+          </div>
+                 <div data-role="collapsible" data-collapsed="true">
+            <h3>Mufti Taqi Usmani</h3>
+            <p>Content</p>
+          </div>
+        </div>
+       
+       
+       
+        
+      </div>
+      <!-- /content -->
+      <div data-role="panel" class="jqm-navmenu-panel" data-position="left" data-display="push" data-theme="a">
+        <ul class="jqm-list ui-alt-icon ui-nodisc-icon">
+          <li data-filtertext="homepage" data-icon="home"><a href="index.html">Home</a></li>
+          <li data-filtertext="About Us"><a href="#about" data-ajax="false">About Us</a></li>
+
+ 
+          <li data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-iconpos="right" data-inset="false">
+            <h3>Bayanaat</h3>
+            <ul>
+              <li data-filtertext="sunday bayanaat"><a href="../collapsible/" data-ajax="false">Sunday Bayanaat</a></li>
+              <li data-filtertext="friday bayanaat"><a href="../collapsible-dynamic/" data-ajax="false">Friday Bayanaat</a></li>
+              <li data-filtertext="morning dars"><a href="../collapsibleset/" data-ajax="false">Morning Dars</a></li>
+               <li data-filtertext="tarbiyati majlis"><a href="../collapsibleset/" data-ajax="false">Tarbiyati Majlis</a></li>
+                          <li data-filtertext="special bayanaat"><a href="../collapsibleset/" data-ajax="false">Special Bayanaat</a></li>
+                           <li data-filtertext="special series"><a href="../collapsibleset/" data-ajax="false">Special Series</a></li>
+                          <li data-filtertext="mufti taqi usmani"><a href="../collapsibleset/" data-ajax="false">Mufti Taqi Usmani</a></li>
+                                       <li data-filtertext="mufti bayanaat"><a href="../collapsibleset/" data-ajax="false">Ramzan Bayanaat</a></li>  <li data-filtertext="nazmian"><a href="../collapsibleset/" data-ajax="false">Nazmain</a></li>
+                                         <li data-filtertext="other bayanaat"><a href="../collapsibleset/" data-ajax="false">Other Bayanaat</a></li>
+                                                     
+            </ul>
+          </li>
+<li data-filtertext="About Us"><a href="#announcement" data-ajax="false">Announcement</a></li>
+<li data-filtertext="About Us"><a href="#contact" data-ajax="false">Contact Us</a></li>
+
+          
+        </ul>
+      </div>
+      <!-- /panel -->
+      
+      <div data-role="footer" data-position="fixed" data-tap-toggle="false" class="jqm-footer">
+       <center>
+        <p></p>
+        <p>Copyright 2014 Markez e Fahmedeen</p>
+    </center>
+      </div>
+      <!-- /footer --> 
+      <!-- TODO: This should become an external panel so we can add input to markup (unique ID) -->
+      <div data-role="panel" class="jqm-search-panel" data-position="right" data-display="push" data-theme="a">
+        <div class="jqm-search">
+          <ul class="jqm-list" data-filter-placeholder="Search demos..." data-filter-reveal="true">
+            <li data-filtertext="demos homepage" data-icon="home"><a href=".././">Home</a></li>
+            <li data-filtertext="introduction overview getting started"><a href="../intro/" data-ajax="false">Introduction</a></li>
+            <li data-filtertext="buttons button markup buttonmarkup method anchor link button element"><a href="../button-markup/" data-ajax="false">Buttons</a></li>
+            <li data-filtertext="form button widget input button submit reset"><a href="../button/" data-ajax="false">Button widget</a></li>
+            <li data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-iconpos="right" data-inset="false">
+              <h3>Checkboxradio widget</h3>
+              <ul>
+                <li data-filtertext="form checkboxradio widget checkbox input checkboxes controlgroups"><a href="../checkboxradio-checkbox/" data-ajax="false">Checkboxes</a></li>
+                <li data-filtertext="form checkboxradio widget radio input radio buttons controlgroups"><a href="../checkboxradio-radio/" data-ajax="false">Radio buttons</a></li>
+              </ul>
+            </li>
+            <li data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-iconpos="right" data-inset="false">
+              <h3>Collapsible (set) widget</h3>
+              <ul>
+                <li data-filtertext="collapsibles content formatting"><a href="../collapsible/" data-ajax="false">Collapsible</a></li>
+                <li data-filtertext="dynamic collapsible set accordion append expand"><a href="../collapsible-dynamic/" data-ajax="false">Dynamic collapsibles</a></li>
+                <li data-filtertext="accordions collapsible set widget content formatting grouped collapsibles"><a href="../collapsibleset/" data-ajax="false">Collapsible set</a></li>
+              </ul>
+            </li>
+            
+            <li data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-iconpos="right" data-inset="false">
+              <h3>3rd party API demos</h3>
+              <ul>
+                <li data-filtertext="backbone requirejs navigation router"><a href="../backbone-requirejs/" data-ajax="false">Backbone RequireJS</a></li>
+                <li data-filtertext="google maps geolocation demo"><a href="../map-geolocation/" data-ajax="false">Google Maps geolocation</a></li>
+                <li data-filtertext="google maps hybrid"><a href="../map-list-toggle/" data-ajax="false">Google Maps list toggle</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- /panel --> 
+      
+    </div>
+    <!-- /page --> 
+
+    <script type="text/javascript" src="cordova.js"></script> 
+    <script type="text/javascript" src="js/index.js"></script> 
+    <script type="text/javascript">
+            app.initialize();
+        </script>
+</body>
+</html>
