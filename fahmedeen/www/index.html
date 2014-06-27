@@ -94,7 +94,7 @@ dd {
         <a href="#" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a> <a href="#" class="jqm-search-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-search ui-nodisc-icon ui-alt-icon ui-btn-right">Search</a> </div>
       <!-- /header -->
       
-      <div role="main" class="ui-content jqm-content">
+      <div role="main" class="ui-content jqm-content" style="padding-top:5px;text-align: center">
         <h1>Welcome to Fahmedeen</h1>
         <div data-role="collapsible-set" data-iconpos="right" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d">
           <div data-role="collapsible">
@@ -165,6 +165,8 @@ dd {
 <li data-filtertext="About Us"><a href="#announcement" data-ajax="false">Announcement</a></li>
 <li data-filtertext="About Us"><a href="#contact" data-ajax="false">Contact Us</a></li>
 
+
+
           
         </ul>
       </div>
@@ -180,35 +182,31 @@ dd {
       <!-- TODO: This should become an external panel so we can add input to markup (unique ID) -->
       <div data-role="panel" class="jqm-search-panel" data-position="right" data-display="push" data-theme="a">
         <div class="jqm-search">
-          <ul class="jqm-list" data-filter-placeholder="Search demos..." data-filter-reveal="true">
-            <li data-filtertext="demos homepage" data-icon="home"><a href=".././">Home</a></li>
-            <li data-filtertext="introduction overview getting started"><a href="../intro/" data-ajax="false">Introduction</a></li>
-            <li data-filtertext="buttons button markup buttonmarkup method anchor link button element"><a href="../button-markup/" data-ajax="false">Buttons</a></li>
-            <li data-filtertext="form button widget input button submit reset"><a href="../button/" data-ajax="false">Button widget</a></li>
-            <li data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-iconpos="right" data-inset="false">
-              <h3>Checkboxradio widget</h3>
-              <ul>
-                <li data-filtertext="form checkboxradio widget checkbox input checkboxes controlgroups"><a href="../checkboxradio-checkbox/" data-ajax="false">Checkboxes</a></li>
-                <li data-filtertext="form checkboxradio widget radio input radio buttons controlgroups"><a href="../checkboxradio-radio/" data-ajax="false">Radio buttons</a></li>
-              </ul>
-            </li>
-            <li data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-iconpos="right" data-inset="false">
-              <h3>Collapsible (set) widget</h3>
-              <ul>
-                <li data-filtertext="collapsibles content formatting"><a href="../collapsible/" data-ajax="false">Collapsible</a></li>
-                <li data-filtertext="dynamic collapsible set accordion append expand"><a href="../collapsible-dynamic/" data-ajax="false">Dynamic collapsibles</a></li>
-                <li data-filtertext="accordions collapsible set widget content formatting grouped collapsibles"><a href="../collapsibleset/" data-ajax="false">Collapsible set</a></li>
-              </ul>
-            </li>
-            
-            <li data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-iconpos="right" data-inset="false">
-              <h3>3rd party API demos</h3>
-              <ul>
-                <li data-filtertext="backbone requirejs navigation router"><a href="../backbone-requirejs/" data-ajax="false">Backbone RequireJS</a></li>
-                <li data-filtertext="google maps geolocation demo"><a href="../map-geolocation/" data-ajax="false">Google Maps geolocation</a></li>
-                <li data-filtertext="google maps hybrid"><a href="../map-list-toggle/" data-ajax="false">Google Maps list toggle</a></li>
-              </ul>
-            </li>
+          <ul class="jqm-list" data-filter-placeholder="Search fahmedeen..." data-filter-reveal="true">
+
+  <li data-filtertext="homepage" data-icon="home"><a href="index.html">Home</a></li>
+          <li data-filtertext="About Us"><a href="#about" data-ajax="false">About Us</a></li>
+
+ 
+          <li data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-iconpos="right" data-inset="false">
+            <h3>Bayanaat</h3>
+            <ul>
+              <li data-filtertext="sunday bayanaat"><a href="../collapsible/" data-ajax="false">Sunday Bayanaat</a></li>
+              <li data-filtertext="friday bayanaat"><a href="../collapsible-dynamic/" data-ajax="false">Friday Bayanaat</a></li>
+              <li data-filtertext="morning dars"><a href="../collapsibleset/" data-ajax="false">Morning Dars</a></li>
+               <li data-filtertext="tarbiyati majlis"><a href="../collapsibleset/" data-ajax="false">Tarbiyati Majlis</a></li>
+                          <li data-filtertext="special bayanaat"><a href="../collapsibleset/" data-ajax="false">Special Bayanaat</a></li>
+                           <li data-filtertext="special series"><a href="../collapsibleset/" data-ajax="false">Special Series</a></li>
+                          <li data-filtertext="mufti taqi usmani"><a href="../collapsibleset/" data-ajax="false">Mufti Taqi Usmani</a></li>
+                                       <li data-filtertext="mufti bayanaat"><a href="../collapsibleset/" data-ajax="false">Ramzan Bayanaat</a></li>  <li data-filtertext="nazmian"><a href="../collapsibleset/" data-ajax="false">Nazmain</a></li>
+                                         <li data-filtertext="other bayanaat"><a href="../collapsibleset/" data-ajax="false">Other Bayanaat</a></li>
+                                                     
+            </ul>
+          </li>
+<li data-filtertext="About Us"><a href="#announcement" data-ajax="false">Announcement</a></li>
+<li data-filtertext="About Us"><a href="#contact" data-ajax="false">Contact Us</a></li>
+
+        
           </ul>
         </div>
       </div>
