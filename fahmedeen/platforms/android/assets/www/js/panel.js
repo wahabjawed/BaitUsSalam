@@ -188,7 +188,15 @@ if ( location.protocol.substr(0,4)  === 'file' ||
 	// Fix the links for subsequent ajax page loads
 	$( document ).on( "pagecreate", fixLinks );
 
-	
+	// Check to see if ajax can be used. This does a quick ajax request and blocks the page until its done
+	$.ajax({
+		url: '.',
+		async: false,
+		isLocal: true
+	}).error(function() {
+		// Ajax doesn't work so turn it off
+		
+	});
 }
 
 $( document ).on( "pagecreate", ".jqm-demos", function( event ) {
@@ -203,7 +211,18 @@ $( document ).on( "pagecreate", ".jqm-demos", function( event ) {
 		str = words[1] || "",
 		text = ver;
 
-	
+	// Insert jqm version in header
+	if ( str.indexOf( "rc" ) == -1 ) {
+		str = str.charAt( 0 ).toUpperCase() + str.slice( 1 );
+	} else {
+		str = str.toUpperCase().replace( ".", "" );
+	}
+
+	if ( $.mobile.version && str ) {
+		text += " " + str;
+	}
+
+
 	// Global navmenu panel
 	$( ".jqm-navmenu-panel ul" ).listview();
 

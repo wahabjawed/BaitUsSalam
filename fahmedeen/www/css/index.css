@@ -3,7 +3,7 @@
 /* Header */
 .jqm-demos .jqm-header {
 	background: #fff;
-	border-top: 4px solid #3eb249;
+	border-top: 4px solid #4284E7;
 	border-bottom-color: #eee;
 }
 .jqm-demos .jqm-header h2 {
@@ -48,12 +48,11 @@
 
 /* Footer */
 .jqm-demos .jqm-footer.ui-footer {
-	position: absolute;
 	bottom: 0;
 	padding-bottom: 0;
 }
 .jqm-demos .jqm-footer {
-	border-top: 1px solid #3eb249;
+	border-top: 1px solid #4284E7;
 }
 .jqm-demos .jqm-footer p {
 	font-size: .8em;
@@ -87,7 +86,7 @@
 	margin: 0 0 .625em;
 }
 .jqm-demos .jqm-content > h2 {
-	color: #3eb249;
+	color: #4284E7;
 	background-color: transparent;
 	border-bottom: 1px solid #ddd;
 	font-size: 1.6em;

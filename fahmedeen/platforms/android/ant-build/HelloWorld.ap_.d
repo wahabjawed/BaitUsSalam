@@ -29,7 +29,10 @@ C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\ant-buil
 C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\ant-build\res\drawable-xhdpi\icon.png \
 C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\assets\www \
 C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\assets\_where-is-www.txt \
+C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\assets\www\about.html \
+C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\assets\www\bayanList.html \
 C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\assets\www\config.xml \
+C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\assets\www\contact.html \
 C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\assets\www\cordova.js \
 C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\assets\www\cordova_plugins.js \
 C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\assets\www\css \
@@ -39,9 +42,13 @@ C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\assets\w
 C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\assets\www\jquery-mobile \
 C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\assets\www\jquery.mobile-1.4.2 \
 C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\assets\www\js \
+C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\assets\www\playAudio.html \
 C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\assets\www\res \
 C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\assets\www\spec \
 C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\assets\www\spec.html \
+C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\assets\www\css\cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff \
+C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\assets\www\css\DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff \
+C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\assets\www\css\font.css \
 C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\assets\www\css\GreenTheme.min.css \
 C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\assets\www\css\images \
 C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\assets\www\css\index.css \
@@ -53,6 +60,7 @@ C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\assets\w
 C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\assets\www\css\jquery.mobile.inline-svg-1.4.2.min.css \
 C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\assets\www\css\jquery.mobile.structure-1.4.2.min.css \
 C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\assets\www\css\jquery.mobile.theme-1.4.2.min.css \
+C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\assets\www\css\k3k702ZOKiLJc3WVjuplzHhCUOGz7vYGh680lGh-uXM.woff \
 C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\assets\www\css\images\ajax-loader.gif \
 C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\assets\www\css\images\icons-png \
 C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\assets\www\css\images\icons-svg \
@@ -464,10 +472,14 @@ C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\assets\w
 C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\assets\www\jquery.mobile-1.4.2\jquery-1.9.1.js \
 C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\assets\www\jquery.mobile-1.4.2\jquery.mobile-1.4.2.min.js \
 C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\assets\www\jquery.mobile-1.4.2\jquery.mobile.structure-1.4.2.min.css \
+C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\assets\www\js\audio.min.js \
+C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\assets\www\js\audiojs.swf \
 C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\assets\www\js\index.js \
 C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\assets\www\js\jquery-1.9.1.js \
 C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\assets\www\js\jquery.mobile-1.4.2.min.js \
+C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\assets\www\js\jquery.mobile-1.4.2.min.map \
 C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\assets\www\js\panel.js \
+C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\assets\www\js\player-graphics.gif \
 C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\assets\www\res\icon \
 C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\assets\www\res\screen \
 C:\Users\Wahab\Documents\github\BaitUsSalam\fahmedeen\platforms\android\assets\www\res\icon\android \

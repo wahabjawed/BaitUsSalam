@@ -26,10 +26,11 @@
 	<meta name="msapplication-tap-highlight" content="no" />
 	<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
 	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-	<link rel="stylesheet" type="text/css" href="css/index.css" />
-	<link href="css/jquery.mobile-1.4.2.min.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
 	
+<link href="css/font.css" rel="stylesheet" type="text/css">
+	<link href="css/jquery.mobile-1.4.2.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+    
 	<title>Fahmedeen</title>
 	<script src="js/jquery-1.9.1.js" type="text/javascript"></script>
 	<script src="js/panel.js"></script>
@@ -37,37 +38,26 @@
 	<script>
 	
 	
-$(document).ready(function () {
-	
-			$.mobile.loading( "show");
-	
-});
-	// 		
-		
 	    var inputId = String(get('type'));
+		var inputName = String(get('name'));
+		
         function get(name) {
             if (name = (new RegExp('[?&]' + encodeURIComponent(name) + '=([^&]*)')).exec(location.search))
                 return decodeURIComponent(name[1]);
         }
 	
-	//alert(inputId);
+$(document).ready(function () {
 	
-		$( document ).on( "pagecreate", "#demo-page", function() {
+			$.mobile.loading( "show");
+			$("#bayanName").text(inputName);	
 
-			$( document ).on( "swipeleft swiperight", "#demo-page", function( e ) {
-				// We check if there is no open panel on the page because otherwise
-				// a swipe to close the left panel would also open the right panel (and v.v.).
-				// We do this by checking the data that the framework stores on the page element (panel: open).
-				if ( $( ".ui-page-active" ).jqmData( "panel" ) !== "open" ) {
-					if ( e.type === "swipeleft" ) {
-						$( "#right-panel" ).panel( "open" );
-					} else if ( e.type === "swiperight" ) {
-						$( "#left-panel" ).panel( "open" );
-					}
-				}
-			});
-		});
+});
+	// 		
 		
+	
+	
+	
+	
 		$.ajax({
   			url: "http://fahmedeen.org/apps/getList.php",
 				type: "GET",
@@ -86,8 +76,8 @@ $(document).ready(function () {
 	$("#bayanList").append($('<li/>', {    //here appending `<li>`
     
 }).append($('<a/>', {    //here appending `<a>` into `<li>`
-    'href': value[1],
-    'data-transition': 'slide',
+  'href': "playAudio.html?link="+value[1]+"&fname="+value[0],
+  'rel':'external',
     'text': value[0]
 })));
 	
@@ -103,42 +93,15 @@ $(document).ready(function () {
 		
     </script>
 	<style>
-/* Swipe works with mouse as well but often causes text selection. */
-#demo-page * {
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	-o-user-select: none;
-	user-select: none;
-}
-/* Content styling. */
-dl {
-	font-family: "Times New Roman", Times, serif;
-	padding: 1em;
-}
-dt {
-	font-size: 2em;
-	font-weight: bold;
-}
-dt span {
-	font-size: .5em;
-	color: #777;
-	margin-left: .5em;
-}
-dd {
-	font-size: 1.25em;
-	margin: 1em 0 0;
-	padding-bottom: 1em;
-	border-bottom: 1px solid #eee;
-}
-.back-btn {
-	float: right;
-	margin: 0 2em 1em 0;
-}
-</style>
-	</head>
+    .jqm-demos .jqm-footer.ui-footer {
+	position: absolute;
+	}
+    
+    </style>
+    
+    </head>
 	<body>
-    <div data-role="page" class="jqm-demos" id="intro">
+    <div data-role="page" class="jqm-demos" id="demo-intro">
       <div data-role="header" class="jqm-header">
         <h2><a href="index.html" title="Fahmedeen"><img src="img/logo.png" alt="jQuery Mobile"></a></h2>
        
@@ -147,8 +110,10 @@ dd {
       
             
       <div role="main" class="ui-content jqm-content" style="padding-top:5px;text-align: center">
-        <h1>Bayan</h1>
+        <h2 id="bayanName"></h2>
        <ul id="bayanList" data-role="listview" data-filter="true" data-filter-placeholder="Search bayan..." data-inset="true">
+    
+  
     
    </ul>
        
@@ -157,78 +122,67 @@ dd {
         
       </div>
       <!-- /content -->
-      <div data-role="panel" class="jqm-navmenu-panel" data-position="left" data-display="push" data-theme="a">
-        <ul class="jqm-list ui-alt-icon ui-nodisc-icon">
-          <li data-filtertext="homepage" data-icon="home"><a href="index.html">Home</a></li>
-          <li data-filtertext="About Us"><a href="#about" data-ajax="false">About Us</a></li>
-
- 
-          <li data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-iconpos="right" data-inset="false">
-            <h3>Bayanaat</h3>
-           
-               <ul>
-              <li data-filtertext="sunday bayanaat"><a href="bayanList.html?type=sunday" data-ajax="false">Sunday Bayanaat</a></li>
-              <li data-filtertext="friday bayanaat"><a href="bayanList.html?type=friday" data-ajax="false">Friday Bayanaat</a></li>
-              <li data-filtertext="morning dars"><a href="bayanList.html?type=morning" data-ajax="false">Morning Dars</a></li>
-               <li data-filtertext="tarbiyati majlis"><a href="bayanList.html?type=majlis" data-ajax="false">Tarbiyati Majlis</a></li>
-                          <li data-filtertext="special bayanaat"><a href="bayanList.html?type=specialBayan" data-ajax="false">Special Bayanaat</a></li>
-                           <li data-filtertext="special series"><a href="bayanList.html?type=specialSeries" data-ajax="false">Special Series</a></li>
-                          <li data-filtertext="mufti taqi usmani"><a href="bayanList.html?type=musmani" data-ajax="false">Mufti Taqi Usmani</a></li>
-                                       <li data-filtertext="mufti bayanaat"><a href="bayanList.html?type=ramzan" data-ajax="false">Ramzan Bayanaat</a></li>  <li data-filtertext="nazmian"><a href="bayanList.html?type=nazam" data-ajax="false">Nazmain</a></li>
-                                         <li data-filtertext="other bayanaat"><a href="bayanList.html?type=other" data-ajax="false">Other Bayanaat</a></li>
-                                                               
-            </ul>
-          </li>
-<li data-filtertext="About Us"><a href="#announcement" data-ajax="false">Announcement</a></li>
-<li data-filtertext="About Us"><a href="#contact" data-ajax="false">Contact Us</a></li>
-
-
-
-          
-        </ul>
-      </div>
-      <!-- /panel -->
-      
-      <div data-role="footer" data-position="fixed" data-tap-toggle="false" class="jqm-footer">
-       <center>
-        <p></p>
-        <p>Copyright 2014 Markez e Fahmedeen</p>
-    </center>
-      </div>
-      <!-- /footer --> 
-      <!-- TODO: This should become an external panel so we can add input to markup (unique ID) -->
-      <div data-role="panel" class="jqm-search-panel" data-position="right" data-display="push" data-theme="a">
-        <div class="jqm-search">
-          <ul class="jqm-list" data-filter-placeholder="Search fahmedeen..." data-filter-reveal="true">
-
-  <li data-filtertext="homepage" data-icon="home"><a href="index.html">Home</a></li>
-          <li data-filtertext="About Us"><a href="#about" data-ajax="false">About Us</a></li>
+ 	    <div data-role="panel" class="jqm-navmenu-panel" data-position="left" data-display="overlay" data-theme="a">
+	    	<ul class="jqm-list ui-alt-icon ui-nodisc-icon">
+<li data-filtertext="homepage" data-icon="home"><a href="index.html" rel="external">Home</a></li>
+          <li data-filtertext="About Us"><a href="about.html" data-ajax="false">About Us</a></li>
 
  
           <li data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-iconpos="right" data-inset="false">
             <h3>Bayanaat</h3>
             <ul>
-              <li data-filtertext="sunday bayanaat"><a href="../collapsible/" data-ajax="false">Sunday Bayanaat</a></li>
-              <li data-filtertext="friday bayanaat"><a href="../collapsible-dynamic/" data-ajax="false">Friday Bayanaat</a></li>
-              <li data-filtertext="morning dars"><a href="../collapsibleset/" data-ajax="false">Morning Dars</a></li>
-               <li data-filtertext="tarbiyati majlis"><a href="../collapsibleset/" data-ajax="false">Tarbiyati Majlis</a></li>
-                          <li data-filtertext="special bayanaat"><a href="../collapsibleset/" data-ajax="false">Special Bayanaat</a></li>
-                           <li data-filtertext="special series"><a href="../collapsibleset/" data-ajax="false">Special Series</a></li>
-                          <li data-filtertext="mufti taqi usmani"><a href="../collapsibleset/" data-ajax="false">Mufti Taqi Usmani</a></li>
-                                       <li data-filtertext="mufti bayanaat"><a href="../collapsibleset/" data-ajax="false">Ramzan Bayanaat</a></li>  <li data-filtertext="nazmian"><a href="../collapsibleset/" data-ajax="false">Nazmain</a></li>
-                                         <li data-filtertext="other bayanaat"><a href="../collapsibleset/" data-ajax="false">Other Bayanaat</a></li>
+              <li data-filtertext="sunday bayanaat"><a href="bayanList.html?type=sunday&name=Sunday Bayan" data-ajax="false">Sunday Bayanaat</a></li>
+              <li data-filtertext="friday bayanaat"><a href="bayanList.html?type=bayans&name=Friday Bayanaat" data-ajax="false">Friday Bayanaat</a></li>
+              <li data-filtertext="morning dars"><a href="bayanList.html?type=morning&name=Morning Dars" data-ajax="false">Morning Dars</a></li>
+               
+                         
+                          <li data-filtertext="mufti taqi usmani"><a href="bayanList.html?type=tusmani&name=Mufti Taqi Usmani" data-ajax="false">Mufti Taqi Usmani</a></li>
+                                       <li data-filtertext="mufti bayanaat"><a href="bayanList.html?type=ramdhan&name=Ramzan Bayan" data-ajax="false">Ramzan Bayanaat</a></li>  <li data-filtertext="nazam"><a href="bayanList.html?type=nazam&name=Nazmain" data-ajax="false">Nazmain</a></li>
+                                         <li data-filtertext="other bayanaat"><a href="bayanList.html?type=others&name=Other Bayanaat" data-ajax="false">Other Bayanaat</a></li>
                                                      
             </ul>
           </li>
-<li data-filtertext="About Us"><a href="#announcement" data-ajax="false">Announcement</a></li>
-<li data-filtertext="About Us"><a href="#contact" data-ajax="false">Contact Us</a></li>
+<li data-filtertext="About Us"><a href="contact.html" data-ajax="false">Contact Us</a></li>
 
-        
-          </ul>
-        </div>
+		     </ul>
+		</div><!-- /panel -->
+
+
+ <div data-role="footer" data-position="fixed" data-tap-toggle="false" class="jqm-footer">
+       <center>
+        <p></p>
+        <p>Copyright 2014 Markez e Fahmedeen</p>
+    </center>
       </div>
-      <!-- /panel --> 
-      
+	<!-- TODO: This should become an external panel so we can add input to markup (unique ID) -->
+    <div data-role="panel" class="jqm-search-panel" data-position="right" data-display="overlay" data-theme="a">
+		<div class="jqm-search">
+			<ul class="jqm-list" data-filter-placeholder="Search demos..." data-filter-reveal="true">
+<li data-filtertext="homepage" data-icon="home"><a href="index.html" rel="external">Home</a></li>
+          <li data-filtertext="About Us"><a href="about.html" data-ajax="false">About Us</a></li>
+
+ 
+          <li data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-iconpos="right" data-inset="false">
+            <h3>Bayanaat</h3>
+            <ul>
+              <li data-filtertext="sunday bayanaat"><a href="bayanList.html?type=sunday&name=Sunday Bayan" data-ajax="false">Sunday Bayanaat</a></li>
+              <li data-filtertext="friday bayanaat"><a href="bayanList.html?type=bayans&name=Friday Bayanaat" data-ajax="false">Friday Bayanaat</a></li>
+              <li data-filtertext="morning dars"><a href="bayanList.html?type=morning&name=Morning Dars" data-ajax="false">Morning Dars</a></li>
+               
+                         
+                          <li data-filtertext="mufti taqi usmani"><a href="bayanList.html?type=tusmani&name=Mufti Taqi Usmani" data-ajax="false">Mufti Taqi Usmani</a></li>
+                                       <li data-filtertext="mufti bayanaat"><a href="bayanList.html?type=ramdhan&name=Ramzan Bayan" data-ajax="false">Ramzan Bayanaat</a></li>  <li data-filtertext="nazam"><a href="bayanList.html?type=nazam&name=Nazmain" data-ajax="false">Nazmain</a></li>
+                                         <li data-filtertext="other bayanaat"><a href="bayanList.html?type=others&name=Other Bayanaat" data-ajax="false">Other Bayanaat</a></li>
+                                                     
+            </ul>
+          </li>
+<li data-filtertext="Contact Us"><a href="contact.html" data-ajax="false">Contact Us</a></li>
+
+	</ul>
+
+		</div>
+	</div><!-- /panel -->
+
     </div>
     <!-- /page --> 
 
@@ -239,3 +193,4 @@ dd {
         </script>
 </body>
 </html>
+
