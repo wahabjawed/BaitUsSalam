@@ -70,9 +70,9 @@
 	<body>
     <div data-role="page" class="jqm-demos" id="demo-intro">
       <div data-role="header" class="jqm-header">
-        <h2><a href="index.html" title="Fahmedeen"><img src="img/logo.png" alt="jQuery Mobile"></a></h2>
+        <h2><a href="index.html" rel="external" title="Fahmedeen"><img src="img/logo.png" alt="jQuery Mobile"></a></h2>
        
-        <a href="#" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a> <a href="#" class="jqm-search-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-search ui-nodisc-icon ui-alt-icon ui-btn-right">Search</a> </div>
+        <a href="#" onclick="goBack()" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-arrow-l ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a> <a href="#" class="jqm-search-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-search ui-nodisc-icon ui-alt-icon ui-btn-right">Search</a> </div>
       <!-- /header -->
       
             
@@ -89,31 +89,7 @@
         
       </div>
       <!-- /content -->
-   	    <div data-role="panel" class="jqm-navmenu-panel" data-position="left" data-display="overlay" data-theme="a">
-	    	<ul class="jqm-list ui-alt-icon ui-nodisc-icon">
-<li data-filtertext="homepage" data-icon="home"><a href="index.html" rel="external">Home</a></li>
-          <li data-filtertext="About Us"><a href="about.html" data-ajax="false">About Us</a></li>
-
- 
-          <li data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-iconpos="right" data-inset="false">
-            <h3>Bayanaat</h3>
-            <ul>
-              <li data-filtertext="sunday bayanaat"><a href="bayanList.html?type=sunday&name=Sunday Bayan" data-ajax="false">Sunday Bayanaat</a></li>
-              <li data-filtertext="friday bayanaat"><a href="bayanList.html?type=bayans&name=Friday Bayanaat" data-ajax="false">Friday Bayanaat</a></li>
-              <li data-filtertext="morning dars"><a href="bayanList.html?type=morning&name=Morning Dars" data-ajax="false">Morning Dars</a></li>
-               
-                         
-                          <li data-filtertext="mufti taqi usmani"><a href="bayanList.html?type=tusmani&name=Mufti Taqi Usmani" data-ajax="false">Mufti Taqi Usmani</a></li>
-                                       <li data-filtertext="mufti bayanaat"><a href="bayanList.html?type=ramdhan&name=Ramzan Bayan" data-ajax="false">Ramzan Bayanaat</a></li>  <li data-filtertext="nazam"><a href="bayanList.html?type=nazam&name=Nazmain" data-ajax="false">Nazmain</a></li>
-                                         <li data-filtertext="other bayanaat"><a href="bayanList.html?type=others&name=Other Bayanaat" data-ajax="false">Other Bayanaat</a></li>
-                                                     
-            </ul>
-          </li>
-<li data-filtertext="About Us"><a href="contact.html" data-ajax="false">Contact Us</a></li>
-
-		     </ul>
-		</div><!-- /panel -->
-
+   	   
 
  <div data-role="footer" data-position="fixed" data-tap-toggle="false" class="jqm-footer">
        <center>
@@ -220,7 +196,9 @@ playme.src="http://fahmedeen.org/"+fileLink;
                 } 
 });
 	
-
+function goBack() {
+    window.history.back()
+}
 
     </script>
 </body>
